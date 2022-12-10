@@ -48,47 +48,6 @@ span {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 1200px) {
-
-}
-
-@media only screen and (max-width: 768px) {
-
-    h1 {
-        font-size: 4rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
-    h3 {
-        font-size: 1.3rem;
-    }
-    
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-   
-    h1 {
-        font-size: 3rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1rem;
-    }
-    
-    p {
-        font-size: 0.9rem;
-    } 
-}
 
 /* MOVING MAIN CONTENT BECAUSE OF A FIXED HEADER */
 
@@ -164,50 +123,39 @@ header nav .search img {
 
 @media only screen and (max-width: 1200px) {
 
+    header .desktop {
+        display: none;
+    }
+
+    header a {
+        font-size: 1.5rem;
+    }
+    
+    header .tablet {
+        height: 5rem;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        border-bottom: dotted 1px #181A1B;
+    }
+
+    header .tablet img {
+        height: 4.8rem;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
       
-    header .desktop {
-        display: none;
-    }
-    
-    header .tablet {
-        height: 3.125rem;
-        width: 100%;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        text-align: left;
-        border-bottom: dotted 1px #181A1B;
-    }
-
-    header .tablet img {
-        height: 2.8rem;
-    }
 }
 
 @media only screen and (max-width: 480px) {
 
-    header .tablet {
-        height: 2.5rem;
-        width: 100%;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        text-align: left;
-        border-bottom: dotted 1px #181A1B;
-    }
-
-    header .tablet img {
-        height: 1.8rem;
-    }
 }
 
 /* BANNER */
@@ -236,15 +184,13 @@ header nav .search img {
 }
 
 @media only screen and (max-width: 480px) {
-    #banner {
-        height: 20rem;
-    }
+
 }
 
 /* FEATURED ITEMS */ 
 
 #featured {
-    width: 90%;
+    width: 100%;
     margin: 5rem auto;
 }
 
@@ -256,7 +202,7 @@ header nav .search img {
 
 #featured .item-container .item {
     margin: 2.5rem 0 0 0;
-    width: 25rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
 }
@@ -279,22 +225,28 @@ header nav .search img {
 @media only screen and (max-width: 1200px) {
 
     #featured .item-container .item {
-        width: 20rem;
+        width: 25rem;
     }
+
+    #featured h3 {
+        font-size: 2rem;
+    }
+
+    #featured p {
+        font-size: 1.5rem;;
+    }
+
+    #featured .item-container h4 {
+        font-size: 2rem;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
 
-    #featured {
-        width: 100%;
-        margin: 3rem auto;
-    }
 
-    #featured .item-container .item {
-        width: 12rem;
-    }
-    
 }
+
 @media only screen and (max-width: 480px) {
 
     
@@ -313,21 +265,50 @@ header nav .search img {
     color: white;
 }
 
-#about h4 {
+#about .company-story h4 {
     margin-top: 2rem;
     line-height: 3.5rem;
+}
+
+#about .staff-container {
+    padding: 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#about .staff-container h4 {
+    font-size: 1rem;
+    padding: .5rem 0;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+#about .staff-container .staff-card {
+    margin: 0 3rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
 }
 
 @media only screen and (max-width: 1200px) {
 
     #about {
-        width: 80%;
+        width: 90%;
     }
 
     #about h4 {
         margin-top: 2rem;
-        line-height: 3rem;
+        line-height: 4rem;
+        font-size: 1.5rem;
     }
+
+    #about .staff-container h4 {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -390,17 +371,28 @@ header nav .search img {
 
 @media only screen and (max-width: 1200px) {
 
+    #contact .method {
+        width: 100%;
+        padding-bottom: 1.5rem;
+    }
+
+    #contact .contact-methods {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     #contact {
-        width: 80%;
+        width: 90%;
         margin: 0 auto 3rem;
     }
     
     #contact .method img {
-        width: 5rem;
+        width: 10rem;
     }
 
     #contact h4 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 
@@ -445,4 +437,11 @@ footer {
     padding-left: .6rem;
     padding-bottom: .6rem;
     font-size: .9rem;
+}
+
+@media only screen and (max-width: 1200px) { 
+    
+    footer {
+        font-size: 1.5rem;
+    }
 }
